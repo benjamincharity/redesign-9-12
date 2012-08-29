@@ -11,12 +11,6 @@
 #   config.output_style = :compact
 # end
 
-# Change Compass configuration
-compass_config do |config|
-  config.output_style = :expanded
-  Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "ms", "o")
-end
-
 ###
 # Page options, layouts, aliases and proxies
 ###
