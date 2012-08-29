@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "Middleman Boilerplate" %></title>
+
+    <%= stylesheet_link_tag "site" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div class="window">
+      <%= partial "shared/header" %>
+
+      <%= yield %>
+
+      <%= partial "shared/footer" %>
+    </div>
+  </body>
+
+  <%= javascript_include_tag  "jquery", "modernizr", "sugar", "scripts" %>
+</html>

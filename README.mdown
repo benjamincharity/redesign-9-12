@@ -1,0 +1,16 @@
+# A ready to go [Middleman](http://middlemanapp.com/) Project
+
+### Using:
+
+- HTML5/CSS3
+- ERB
+- SCSS
+ - Compass
+ - Multiple scss files
+- My custom reset (based off of the [Meyer Reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/) and the [HTML5 Boilerplate Reset](http://html5boilerplate.com/docs/The-style/), then tweaked over a few years)
+- jQuery / Modernizr / Sugar
+- Shortened folder names (`/js/`, `/i/`, `/css/`)
+- Added support for custom meta data on each page
+
+- - -
+
