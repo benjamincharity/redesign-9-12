@@ -12,3 +12,9 @@
 
 # Ignore Sass' cache
 /.sass-cache
+
+# Ignore the rvmrc
+.rvmrc
+
+# Ignore itself
+.gitignore
