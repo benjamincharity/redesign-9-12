@@ -1,11 +1,214 @@
-html {
-
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 body {
-
+  background: url("/i/bg.jpg") left top no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -ms-background-size:     cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+  color: $white;
+  @include lato;
+  @include rem('font-size',15px);
+  position: relative;
 }
 
-.symbol {
-  font-family: $web-symbols;
+// wrapper div
+.window {
+  height: 100%;
+  width: 100%;
+}
+
+.main-header {
+  padding: 30px;
+}
+
+.logo {
+  display: block;
+  margin: 0px auto;
+  opacity: 0.7;
+}
+
+// main section e.g. pixel whisperer section
+article {
+  color: $white;
+  margin-bottom: 30px;
+
+  // all the section content - hidden by default
+  .hide-yo-kids {
+    display: none;
+  }
+
+  .mad-skillz-list {
+    line-height: 1.2em;
+    margin: 20px 8px;
+    opacity: 0.8;
+  }
+
+  // both lists in the bull honkey sections
+  li {
+    display: inline-block;
+    padding-right: 6px;
+
+    // add a comma to each item
+    &::after {
+      content: ',';
+    }
+
+    // override the last comma
+    &:last-of-type {
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+
+// 'bullshit title'
+h1 {
+  background-color: $white;
+  color: $dark-gray;
+  display: inline-block;
+  font-family: $futura;
+  @include rem('font-size',26px);
+  height: 58px;
+  line-height: 58px;
+  padding: 0 30px 0 10px;
+  position: relative;
+  // why the bleepity-bleep do I need this?
+  text-shadow: none;
+
+  &::after {
+    background: url("/i/grip.jpg") no-repeat;
+    content: "";
+    display: block;
+    height: 25px;
+    opacity: 0.5;
+    position: absolute;
+    right: 8px;
+    top: 17px;
+    width: 8px;
+  }
+}
+
+// 'who paid me' section
+aside {
+  @include rem('font-size',10px);
+  opacity: 0.6;
+  text-align: center;
+
+  ul {
+    opacity: 0.7;
+    text-align: left;
+  }
+}
+
+// 'who paid me' title
+h3 {
+  display: inline-block;
+  margin: 0 auto;
+  opacity: 0.8;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.45);
+
+  // bar decoration on the left
+  &::before {
+    background-color: $white;
+    @include box-shadow(1px 1px 1px rgba(0,0,0,0.45));
+    content: "";
+    display: block;
+    height: 1px;
+    opacity: 0.3;
+    position: absolute;
+    right: -100px;
+    top: 7px;
+    width: 80px;
+  }
+
+  // bar decoration on the right
+  &::after {
+    background-color: $white;
+    @include box-shadow(1px 1px 1px rgba(0,0,0,0.45));
+    content: "";
+    display: block;
+    height: 1px;
+    opacity: 0.3;
+    position: absolute;
+    left: -100px;
+    top: 7px;
+    width: 80px;
+  }
+}
+
+// main navigation
+nav {
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  .i-want-to-go-to-there {
+    background: url("/i/target.png") no-repeat;
+    display: block;
+    height: 90px;
+    opacity: 0.7;
+    overflow: hidden;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    text-indent: 100%;
+    @include single-transition;
+    white-space: nowrap;
+    width: 90px;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    padding-right: 140px;
+  }
+
+  li {
+    display: inline-block;
+    float: right;
+    margin: 0 22px;
+
+    a {
+      -webkit-background-size: 22px;
+      -moz-background-size:    22px;
+      -ms-background-size:     22px;
+      -o-background-size:      22px;
+      background-size:         22px;
+      display: block;
+      height: 44px;
+      opacity: 0.7;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 44px;
+
+      &[href$="labs"] {
+        background: url("/i/lightbulb.png") center no-repeat;
+      }
+
+      &[href$="contact"] {
+        background: url("/i/phone.png") center no-repeat;
+      }
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }

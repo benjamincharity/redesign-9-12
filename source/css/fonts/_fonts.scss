@@ -1,14 +1,22 @@
 @font-face {
-  font-family: 'websymbols';
-  src: url('/css/fonts/websymbols.eot');
-  src: url('/css/fonts/websymbols.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/websymbols.woff') format('woff'),
-       url('/css/fonts/websymbols.ttf') format('truetype'),
-       url('/css/fonts/websymbols.svg#WebSymbolsRegular') format('svg');
+  font-family: 'futura_lt';
+  src: url('/css/fonts/futuralt-condensedboldoblique.eot');
+  src: url('/css/fonts/futuralt-condensedboldoblique.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/futuralt-condensedboldoblique.woff') format('woff'),
+       url('/css/fonts/futuralt-condensedboldoblique.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-$sans-serif: Arial, Helvetica, sans-serif;
+$sans-serif: Helvetica, Arial, sans-serif;
 $serif: Georgia, serif;
-$web-symbols: websymbols;
+$futura: 'futura_lt', helvetica, sans-serif;
+$lato: 'Lato', helvetica, sans-serif;
+
+@mixin lato {
+  color: $dark-gray;
+  font-family: $lato;
+  font-weight: 700;
+  line-height: 1em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.45);
+}
