@@ -191,7 +191,7 @@ input:invalid, textarea:invalid {
 }
 
 a:link {
-  //-webkit-tap-highlight-color: #ff5e99
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ie7 img {

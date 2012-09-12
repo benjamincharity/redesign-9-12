@@ -20,11 +20,13 @@ body {
 // wrapper div
 .window {
   height: 100%;
+  min-height: 416px;
+  position: relative;
   width: 100%;
 }
 
 .main-header {
-  padding: 30px;
+  padding: 24px;
 }
 
 .logo {
@@ -36,7 +38,7 @@ body {
 // main section e.g. pixel whisperer section
 article {
   color: $white;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   // all the section content - hidden by default
   .hide-yo-kids {
@@ -74,9 +76,10 @@ h1 {
   color: $dark-gray;
   display: inline-block;
   font-family: $futura;
-  @include rem('font-size',26px);
-  height: 58px;
-  line-height: 58px;
+  @include rem('font-size',24px);
+  font-weight: normal;
+  height: 45px;
+  line-height: 45px;
   padding: 0 30px 0 10px;
   position: relative;
   // why the bleepity-bleep do I need this?
@@ -90,7 +93,7 @@ h1 {
     opacity: 0.5;
     position: absolute;
     right: 8px;
-    top: 17px;
+    top: 11px;
     width: 8px;
   }
 }
@@ -147,7 +150,7 @@ h3 {
 
 // main navigation
 nav {
-  height: 90px;
+  height: 57px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -155,8 +158,13 @@ nav {
 
   .i-want-to-go-to-there {
     background: url("/i/target.png") no-repeat;
+    -webkit-background-size: 44px;
+    -moz-background-size:    44px;
+    -ms-background-size:     44px;
+    -o-background-size:      44px;
+    background-size:         44px;
     display: block;
-    height: 90px;
+    height: 44px;
     opacity: 0.7;
     overflow: hidden;
     position: absolute;
@@ -165,7 +173,8 @@ nav {
     text-indent: 100%;
     @include single-transition;
     white-space: nowrap;
-    width: 90px;
+    width: 44px;
+    z-index: 2;
 
     &:focus,
     &:hover {
@@ -174,35 +183,83 @@ nav {
   }
 
   ul {
-    overflow: hidden;
-    padding-right: 140px;
+    display: block;
+    height: 100%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+
+    //-moz-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    //-ms-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    //-o-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    //transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+
+    //-moz-transform:    translateX( -110% );
+    //-ms-transform:     translateX( -110% );
+    //-o-transform:      translateX( -110% );
+    //transform:         translateX( -110% );
+
+    // when .i-want-to-go-to-there is clicked it adds a hash which enables this
+    &:target {
+      //-moz-transform:    translateX( 10% );
+      //-ms-transform:     translateX( 10% );
+      //-o-transform:      translateX( 10% );
+      //transform:         translateX( 10% );
+
+      li {
+        a {
+          //-webkit-transform: translateX( 0% );
+        }
+
+        &[href$="labs"] {
+        }
+
+        &[href$="contact"] {
+
+        }
+      }
+    }
   }
 
   li {
     display: inline-block;
     float: right;
-    margin: 0 22px;
+    margin: 0 16px;
+    position: absolute;
+    bottom: 12px;
+    //-webkit-transform: translateX( -110% );
 
     a {
-      -webkit-background-size: 22px;
-      -moz-background-size:    22px;
-      -ms-background-size:     22px;
-      -o-background-size:      22px;
-      background-size:         22px;
       display: block;
       height: 44px;
+      position: absolute;
       opacity: 0.7;
       overflow: hidden;
       text-indent: 100%;
       white-space: nowrap;
       width: 44px;
+      -webkit-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      //-webkit-transform: translateX( 110% );
 
       &[href$="labs"] {
         background: url("/i/lightbulb.png") center no-repeat;
+        -webkit-background-size: 18px;
+        -moz-background-size:    18px;
+        -ms-background-size:     18px;
+        -o-background-size:      18px;
+        background-size:         18px;
+        right: 200px;
       }
 
       &[href$="contact"] {
         background: url("/i/phone.png") center no-repeat;
+        -webkit-background-size: 22px;
+        -moz-background-size:    22px;
+        -ms-background-size:     22px;
+        -o-background-size:      22px;
+        background-size:         22px;
+        right: 100px;
       }
 
       &:focus,
