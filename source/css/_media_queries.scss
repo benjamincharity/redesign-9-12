@@ -3,9 +3,16 @@
 // really wide screen
 //
 @media all and (min-width: 71.25em) {
-  .row-container {
-    width: 1140px;
+
+  body {
+    background-repeat: repeat;
+    -webkit-background-size: 30%;
+    -moz-background-size:    30%;
+    -ms-background-size:     30%;
+    -o-background-size:      30%;
+    background-size:         30%;
   }
+
 }
 
 
@@ -16,8 +23,37 @@
 //
 @media all and (max-width: 71.25em) {
 
+  body {
+    background-repeat: repeat;
+    -webkit-background-size: 40%;
+    -moz-background-size:    40%;
+    -ms-background-size:     40%;
+    -o-background-size:      40%;
+    background-size:         40%;
+  }
 }
 
+
+//
+//
+// everything LARGER ipad portrait
+//
+@media all and (min-width: 48em) {
+
+  .page {
+    padding-top: 120px;
+
+    &.movinOnUp {
+      top: auto;
+    }
+
+    article {
+      margin: 0 auto 22px;
+      width: 500px;
+    }
+  }
+
+}
 
 
 //
@@ -25,6 +61,14 @@
 // everything up to ipad portrait
 //
 @media all and (max-width: 48em) {
+
+  body {
+    -webkit-background-size: normal;
+    -moz-background-size:    normal;
+    -ms-background-size:     normal;
+    -o-background-size:      normal;
+    background-size:         normal;
+  }
 
 }
 
@@ -36,8 +80,37 @@
 //
 @media all and (max-width: 30em) {
 
-}
+  body {
+    -webkit-background-size: cover;
+    -moz-background-size:    cover;
+    -ms-background-size:     cover;
+    -o-background-size:      cover;
+    background-size:         cover;
+  }
 
+  body,
+  .window,
+  .page-wrapper,
+  .page {
+    height: 416px;
+  }
+
+  #contact {
+    ul {
+      -webkit-column-count: 2;
+      -moz-column-count:    2;
+      column-count:         2;
+
+      -webkit-column-gap: 20px;
+      -moz-column-gap:    20px;
+      column-gap:         20px;
+
+      //a {
+        //padding: 8px;
+      //}
+    }
+  }
+}
 
 
 //

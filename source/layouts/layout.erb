@@ -18,7 +18,9 @@
     <div class="window">
       <%= partial "shared/header" %>
 
-      <%= yield %>
+      <div class="page-wrapper">
+        <%= yield %>
+      </div>
 
       <%= partial "shared/footer" %>
     </div>
