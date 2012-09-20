@@ -4,15 +4,6 @@
 //
 @media all and (min-width: 71.25em) {
 
-  body {
-    background-repeat: repeat;
-    -webkit-background-size: 30%;
-    -moz-background-size:    30%;
-    -ms-background-size:     30%;
-    -o-background-size:      30%;
-    background-size:         30%;
-  }
-
 }
 
 
@@ -23,14 +14,6 @@
 //
 @media all and (max-width: 71.25em) {
 
-  body {
-    background-repeat: repeat;
-    -webkit-background-size: 40%;
-    -moz-background-size:    40%;
-    -ms-background-size:     40%;
-    -o-background-size:      40%;
-    background-size:         40%;
-  }
 }
 
 
@@ -62,14 +45,6 @@
 //
 @media all and (max-width: 48em) {
 
-  body {
-    -webkit-background-size: normal;
-    -moz-background-size:    normal;
-    -ms-background-size:     normal;
-    -o-background-size:      normal;
-    background-size:         normal;
-  }
-
 }
 
 
@@ -79,14 +54,6 @@
 // up to iphone landscape
 //
 @media all and (max-width: 30em) {
-
-  body {
-    -webkit-background-size: cover;
-    -moz-background-size:    cover;
-    -ms-background-size:     cover;
-    -o-background-size:      cover;
-    background-size:         cover;
-  }
 
   body,
   .window,
@@ -104,10 +71,15 @@
       -webkit-column-gap: 20px;
       -moz-column-gap:    20px;
       column-gap:         20px;
+    }
+  }
 
-      //a {
-        //padding: 8px;
-      //}
+  #labs {
+    ul {
+      img {
+        max-height: 100%;
+        width: 150px;
+      }
     }
   }
 }

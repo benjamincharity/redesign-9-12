@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background: url("../i/bg.jpg") left top no-repeat;
+  background: url("../i/bg.jpg") left top repeat;
   color: $white;
   @include lato;
   @include rem('font-size',15px);
@@ -131,6 +131,7 @@ article {
 // 'bullshit title'
 h1 {
   background-color: $white;
+  cursor: pointer;
   color: $dark-gray;
   display: inline-block;
   font-family: $futura;
@@ -249,14 +250,36 @@ h3 {
     text-align: center;
   }
 
+  .youKnowYouWantMore {
+    color: $white;
+    display: block;
+    @include rem('font-size',12px);
+    font-weight: 500;
+    opacity: 0.8;
+    padding: 6px;
+    @include single-transition;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   ul {
     li {
       margin: 6px;
     }
 
     a {
-      border: 1px solid $white;
+      border: 1px solid rgba($white, 0.5);
       display: block;
+      position: relative;
+      @include single-transition;
+
+      &:focus,
+      &:hover {
+        top: 4px;
+      }
     }
   }
 }
