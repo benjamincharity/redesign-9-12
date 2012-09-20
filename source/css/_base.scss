@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background: url("/i/bg.jpg") left top no-repeat;
+  background: url("../i/bg.jpg") left top no-repeat;
   color: $white;
   @include lato;
   @include rem('font-size',15px);
@@ -105,24 +105,26 @@ article {
     margin: 12px 8px;
     opacity: 0.9;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+
+    li {
+      // add a comma to each item
+      &::after {
+        content: ',';
+      }
+
+      // override the last comma
+      &:last-of-type {
+        &::after {
+          content: "";
+        }
+      }
+    }
   }
 
   // both lists in the bull honkey sections
   li {
     display: inline-block;
     padding-right: 6px;
-
-    // add a comma to each item
-    &::after {
-      content: ',';
-    }
-
-    // override the last comma
-    &:last-of-type {
-      &::after {
-        content: "";
-      }
-    }
   }
 }
 
@@ -142,7 +144,7 @@ h1 {
   text-shadow: none;
 
   &::after {
-    background: url("/i/grip.jpg") no-repeat;
+    background: url("../i/grip.jpg") no-repeat;
     content: "";
     display: block;
     height: 25px;
@@ -158,10 +160,6 @@ h1 {
 #labs h1,
 #contact h1 {
   padding-right: 10px;
-
-  &::after {
-    display: none;
-  }
 }
 
 // 'who paid me' section
@@ -216,6 +214,7 @@ h3 {
   }
 }
 
+// contact page
 #contact {
   ul {
     text-align: center;
@@ -241,6 +240,23 @@ h3 {
       &:hover {
         opacity: 1;
       }
+    }
+  }
+}
+
+#labs {
+  article {
+    text-align: center;
+  }
+
+  ul {
+    li {
+      margin: 6px;
+    }
+
+    a {
+      border: 1px solid $white;
+      display: block;
     }
   }
 }

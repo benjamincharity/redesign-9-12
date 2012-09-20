@@ -20,6 +20,13 @@ if ($('html').hasClass('touch')) {
   }
 
 
+  // faster clicks on mobile
+  $(function() {
+    window.addEventListener('load', function() {
+      alert(getElementsByTagName('h1'));
+      new FastClick(document.getElementsByTagName('h1'));
+    }, false);
+  });
 
 
   //$(function() {
