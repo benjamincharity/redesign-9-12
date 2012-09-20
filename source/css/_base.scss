@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background: url("../i/bg.jpg") left top repeat;
+  background: #3B64DA url("../i/bg.jpg") left top repeat;
   color: $white;
   @include lato;
   @include rem('font-size',15px);
@@ -275,11 +275,17 @@ h3 {
       display: block;
       position: relative;
       @include single-transition;
+      width: 200px;
 
       &:focus,
       &:hover {
         top: 4px;
       }
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
     }
   }
 }

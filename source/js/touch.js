@@ -22,71 +22,19 @@ if ($('html').hasClass('touch')) {
 
   // faster clicks on mobile
   $(function() {
-    window.addEventListener('load', function() {
-      alert(getElementsByTagName('h1'));
-      new FastClick(document.getElementsByTagName('h1'));
-    }, false);
+    $('#superfluous-titles').on('touchend', 'h1', function(event) {
+      var $self = $(this),
+      $page = $('#superfluous-titles');
+
+      if($self.next().is(':visible')) {
+        $page.removeClass('movinOnUp');
+        $('.hide-yo-kids').slideUp();
+      } else {
+        $page.addClass('movinOnUp');
+        $('.hide-yo-kids').slideUp();
+        $self.next().slideDown();
+      }
+    });
   });
-
-
-  //$(function() {
-    //// Enable swiping
-    //$(".content-boxes").swipe({
-      //swipe: swipe,
-      //// threshold must be over a few pixels as a tap often registers a few pixels left or right
-      //threshold: 50,
-      //maxTimeThreshold: 4000,
-      //allowPageScroll: "vertical"
-    //});
-  //});
-
-  // Swipe handlers.
-  // The only arg passed is the original touch event object
-  //function swipe(event, direction) {
-    //var $self = $(this),
-        //listArray = [0,1,2,3],
-        //$lists = $('.posts-list').data('list'), // find all lists
-        //activeList = $self.find('.posts-list.active').data('list'), // find active list
-        //nextList = listArray[($.inArray(activeList, listArray) + 1) % listArray.length],
-        //prevList = listArray[($.inArray(activeList, listArray) - 1 + listArray.length) % listArray.length];
-
-    //// swipe left, go to the right
-    //if(direction === "left" && activeList < 3) {
-      //var $newList = $("ol[data-list='" + nextList + "']"),
-      //tabData = $newList.attr('class').split(' ')[1],
-      //$newTab = $(".tabs a[data-box='" + tabData + "']");
-
-      //// remove active class on active tab
-      //$('.tabs .active').removeClass('active');
-      //// add active class to new tab
-      //$newTab.addClass('active');
-
-      //// find the currently active list and hide the contents
-      //$('.posts-list.active').removeClass('active').hideListItems();
-      //(function() {
-        //$newList.addClass('active').showListItems();
-      //}).delay(600); 
-    //}
-
-    //// swipe right, go to the left
-    //else if (direction === "right" && activeList !== 0) {
-      //var $prevList = $("ol[data-list='" + prevList + "']"),
-      //tabData = $prevList.attr('class').split(' ')[1],
-      //$newTab = $(".tabs a[data-box='" + tabData + "']");
-
-      //// remove active class on active tab
-      //$('.tabs .active').removeClass('active');
-      //// add active class to new tab
-      //$newTab.addClass('active');
-
-      //// find the currently active list and hide the contents
-      //$('.posts-list.active').removeClass('active').hideListItems();
-
-      //(function() {
-        //$prevList.addClass('active').showListItems();
-      //}).delay(600);
-    //}
-
-  //}
 
 }
