@@ -9,10 +9,16 @@ nav {
   // pseudo for when #navigation is in the URL
   &.active {
     a {
-      &[href$="home"],
-      &[href$="labs"],
+      &[href$="home"] {
+        right: 175px;
+      }
+
+      &[href$="labs"] {
+        right: 100px;
+      }
+
       &[href$="contact"] {
-        -webkit-transform: translateX( 1px );
+        right: 250px;
       }
     }
   }
@@ -61,9 +67,14 @@ nav {
       -ms-background-size:     22px;
       -o-background-size:      22px;
       background-size:         22px;
-      right: 250px;
-      -webkit-transform: translateX( 500px );
+
+      right: -500px;
+
       -webkit-transition: all 160ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -moz-transition:    all 160ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -ms-transition:     all 160ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -o-transition:      all 160ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      transition:         all 160ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
     }
 
     &[href$="home"] {
@@ -73,9 +84,14 @@ nav {
       -ms-background-size:     22px;
       -o-background-size:      22px;
       background-size:         22px;
-      right: 175px;
-      -webkit-transform: translateX( 500px );
+
+      right: -500px;
+
       -webkit-transition: all 300ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -moz-transition:    all 300ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -ms-transition:     all 300ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -o-transition:      all 300ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      transition:         all 300ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
     }
 
     &[href$="labs"] {
@@ -85,9 +101,14 @@ nav {
       -ms-background-size:     18px;
       -o-background-size:      18px;
       background-size:         18px;
-      right: 100px;
-      -webkit-transform: translateX( 500px );
+
+      right: -500px;
+
       -webkit-transition: all 400ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -moz-transition:    all 400ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -ms-transition:     all 400ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      -o-transition:      all 400ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+      transition:         all 400ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
     }
 
     &:focus,
